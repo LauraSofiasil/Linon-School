@@ -105,9 +105,10 @@ fun HomeScreen() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color.Cyan)
+                    .background(Color.Transparent)
                     .weight(1f),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceBetween
             ) {
                 Button(
                     onClick = {},
@@ -129,12 +130,52 @@ fun HomeScreen() {
                         fontSize = 15.sp
                     )
                 }
-                Image(
-                    painter = painterResource(
-                        R.drawable.youtube
-                    ),
-                    contentDescription = ""
-                )
+                Row(
+                    modifier = Modifier
+                        .padding(bottom = 20.dp)
+                        .width(300.dp)
+                        .background(Color.Transparent)
+                        .height(50.dp),
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Image(
+                        painter = painterResource(
+                            R.drawable.youtube
+                        ),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(50.dp)
+                            .padding(start = 15.dp)
+
+                    )
+                    Image(
+                        painter = painterResource(
+                            R.drawable.twitter
+                        ),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(50.dp)
+                            .padding(start = 15.dp)
+                    )
+                    Image(
+                        painter = painterResource(
+                            R.drawable.instagram
+                        ),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(50.dp)
+                            .padding(start = 15.dp)
+                    )
+                    Image(
+                        painter = painterResource(
+                            R.drawable.facebook
+                        ),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(50.dp)
+                            .padding(start = 15.dp)
+                    )
+                }
             }
 
         }
